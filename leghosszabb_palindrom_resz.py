@@ -3,10 +3,10 @@ def osszes_reszsztring(string):
   for i in range(len(string)):
     for j in range(i,len(string)):
         #print("[",i,j,"]")
-        lista.append(string[i: j + 1 ]) #i és j közti szeletét fogja hozzáfűzni a listához
+        lista.append(string[i: j + 1 ]) 
   return lista
 
-#megmondja egy szóról hogy palindroma-e
+
 def palindroma_e(s):
     f = s[::-1]
     if s == f:
@@ -18,11 +18,11 @@ def palindroma_e(s):
 def leghosszabb_palindroma_resz(s):
     reszsztringek_lista = osszes_reszsztring(s)
     max = -1
-    for resz in reszsztringek_lista: #végigmegyek az összes reszsztringen
-        if palindroma_e(resz) and len(resz)>max: #ha az adott részsztring hossza nagyobb mint a mostani maximumom
-            #és palindroma is akkor lecserélem az akutális maximumot a mostani részsztring hosszára
+    for resz in reszsztringek_lista: 
+        if palindroma_e(resz) and len(resz)>max:
+         
             max = len(resz)
-            max_szo = resz #meg elmentem az akutálus részsztringet is
+            max_szo = resz 
 
     return max_szo
 
